@@ -9,6 +9,7 @@ public interface UserService {
     UserResponseDto updateRole(Long id, Role role);
 
     UserResponseDto getUserProfile();
+
     UserResponseDto updateInfo(UserUpdateRequestDto requestDto);
 
     UserResponseDto register(UserRegistrationRequestDto requestDto);

@@ -1,0 +1,46 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-default-admin-user
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: email
+                  value: "mykhailo@mail.com"
+              - column:
+                  name: password
+                  value: "$2a$12$PTlmes32j0f1tpKyTh4eouT6TDBExy/BYOAZYJ6.wvnWFt8YtBium"
+              - column:
+                  name: first_name
+                  value: "Admin"
+              - column:
+                  name: last_name
+                  value: "One"
+
+  - changeSet:
+      id: insert-default-roles
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column: { name: name, value: "ADMIN" }
+        - insert:
+            tableName: roles
+            columns:
+              - column: { name: name, value: "CUSTOMER" }
+
+  - changeSet:
+      id: insert-admin-role
+      author: mykhailoKrk
+      changes:
+        - insert:
+            tableName: user_roles
+            columns:
+              - column: { name: user_id, value: 1 }
+              - column: { name: role_id, value: 1 }

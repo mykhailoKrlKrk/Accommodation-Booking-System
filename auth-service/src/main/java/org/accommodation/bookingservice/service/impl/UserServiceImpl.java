@@ -39,7 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto getUserProfile() {
-       return userMapper.toDto(getAuthenticatedUser());
+        return userMapper.toDto(getAuthenticatedUser());
     }
 
     @Override
@@ -68,6 +68,4 @@ public class UserServiceImpl implements UserService {
                 () -> new EntityNotFoundException("Can't find user with email: "
                         + authentication.getName()));
     }
-
-
 }
