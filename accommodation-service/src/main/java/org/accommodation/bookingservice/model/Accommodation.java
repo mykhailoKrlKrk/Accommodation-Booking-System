@@ -38,7 +38,7 @@ public class Accommodation {
     @Column(name = "amenities", nullable = false)
     private List<String> amenities;
 
-    @Column(name = "dailyRate", nullable = false)
+    @Column(name = "daily_rate", nullable = false)
     private BigDecimal dailyRate;
 
     @Column(name = "availability", nullable = false)
