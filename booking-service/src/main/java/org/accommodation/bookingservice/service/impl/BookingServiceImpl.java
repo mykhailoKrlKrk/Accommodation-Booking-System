@@ -9,7 +9,6 @@ import org.accommodation.bookingservice.model.Booking;
 import org.accommodation.bookingservice.repository.BookingRepository;
 import org.accommodation.bookingservice.service.BookingService;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
 @RequiredArgsConstructor
