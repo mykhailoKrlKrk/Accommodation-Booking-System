@@ -23,13 +23,13 @@ public class BookingServiceImpl implements BookingService {
     public BookingResponseDto create(BookingRequestDto requestDto) {
         Booking model = bookingMapper.toModel(requestDto);
 
-        UserResponseDto userResponseDto = webClient.get()
-                .uri("http://localhost:8081/api/users")
-                .retrieve()
-                .bodyToMono(UserResponseDto.class)
-                        .block();
-
-        model.setUserId(userResponseDto.getId());
+//        UserResponseDto userResponseDto = webClient.get()
+//                .uri("http://localhost:8081/api/users")
+//                .retrieve()
+//                .bodyToMono(UserResponseDto.class)
+//                        .block();
+//
+        model.setUserId(1L);
         return bookingMapper.toDto(bookingRepository.save(model));
     }
 

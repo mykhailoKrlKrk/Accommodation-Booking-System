@@ -39,7 +39,7 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @JoinTable(name = "user_roles",
